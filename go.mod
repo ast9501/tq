@@ -1,10 +1,11 @@
-module github.com/jdolitsky/tq
+module github.com/ast9501/tq
 
 go 1.22.1
 
 require (
 	github.com/google/go-cmp v0.6.0
 	github.com/hashicorp/hcl/v2 v2.20.0
+	github.com/jdolitsky/tq v0.3.0
 	github.com/lithammer/dedent v1.1.0
 )
 

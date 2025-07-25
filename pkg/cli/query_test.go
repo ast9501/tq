@@ -220,7 +220,7 @@ func TestQuery(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		got, err := Query(test.query, []byte(test.input))
+		got, err := Query(nil, test.query, []byte(test.input))
 		if err != nil {
 			if test.shouldErr {
 				continue
