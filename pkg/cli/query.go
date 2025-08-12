@@ -3,7 +3,6 @@ package cli
 import (
 	"bytes"
 	"encoding/json"
-	"fmt"
 	"io"
 	"os"
 	"os/exec"
@@ -36,7 +35,6 @@ func Query(argMap ArgMap, query string, in []byte) ([]byte, error) {
 		}
 		args = append(args, "-r", query)
 		cmd = exec.Command(args[0], args[1:]...)
-		fmt.Printf("args = %#v\n", args)
 	} else {
 		// Run jq directly, passing the parsed JSON as STDIN
 		cmd = exec.Command("jq", "-r", query)

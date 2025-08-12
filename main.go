@@ -9,9 +9,6 @@ import (
 
 func main() {
 	argMap, buf, query, err := cli.CommandLineArgsBuffer(true)
-	for k, v := range argMap {
-		fmt.Printf(" %s = %s", k, v)
-	}
 	if err != nil {
 		log.Fatal(err)
 	}

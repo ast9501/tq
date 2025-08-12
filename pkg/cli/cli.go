@@ -42,10 +42,6 @@ func CommandLineArgsBuffer(withQuery bool) (ArgMap, *bytes.Buffer, string, error
 			i++
 		}
 	}
-	// print arg map for debug
-	for k, v := range argMap {
-		fmt.Printf("%s = %q\n", k, v)
-	}
 	files := []string{}
 	query := ""
 	if withQuery {
